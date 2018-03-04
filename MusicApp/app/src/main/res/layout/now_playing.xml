@@ -39,10 +39,10 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@id/artist_name"
         android:layout_centerHorizontal="true"
         android:orientation="horizontal"
-        android:paddingBottom="30dp">
+        android:paddingTop="50dp">
 
         <ImageView
             android:layout_width="70dp"
@@ -64,5 +64,16 @@
             android:id="@+id/right"
             android:src="@drawable/right" />
     </LinearLayout>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:background="#000000"
+        android:textColor="#FFFFFF"
+        android:id="@+id/button"
+        android:text="@string/songs_library" />
 
 </RelativeLayout>

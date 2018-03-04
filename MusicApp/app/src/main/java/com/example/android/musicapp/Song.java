@@ -1,7 +1,5 @@
 package com.example.android.musicapp;
 
-import android.widget.ImageView;
-
 public class Song {
 
     private String mSongName;
