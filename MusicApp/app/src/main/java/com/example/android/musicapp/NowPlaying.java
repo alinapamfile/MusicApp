@@ -19,23 +19,23 @@ public class NowPlaying extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         String songName = extras.getString("song_name");
         String artistName = extras.getString("artist_name");
-        int album = extras.getInt("album_photo");
+        int albumCover = extras.getInt("album_photo");
 
         //Setting the song name
-        TextView textView = (TextView) findViewById(R.id.song_name);
-        textView.setText(songName);
+        TextView songNameTextView = (TextView) findViewById(R.id.song_name_text_view);
+        songNameTextView.setText(songName);
 
         //Setting the song's artist
-        textView = (TextView) findViewById(R.id.artist_name);
-        textView.setText(artistName);
+        TextView artistNameTextView = (TextView) findViewById(R.id.artist_name_text_view);
+        artistNameTextView.setText(artistName);
 
         //Setting the album cover
-        final ImageView imageView = (ImageView) findViewById(R.id.album_photo);
-        imageView.setImageResource(album);
+        ImageView albumCoverImageView = (ImageView) findViewById(R.id.album_cover_image_view);
+        albumCoverImageView.setImageResource(albumCover);
 
         //Setting a ClickListener on the "Songs Library" button
-        View view = (View) findViewById(R.id.button);
-        view.setOnClickListener(new View.OnClickListener() {
+        View songsLibraryButton = (View) findViewById(R.id.songs_library_button);
+        songsLibraryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(NowPlaying.this, MainActivity.class);

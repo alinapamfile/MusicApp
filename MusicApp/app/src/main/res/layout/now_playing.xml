@@ -6,7 +6,7 @@
     tools:context="com.example.android.musicapp.NowPlaying">
 
     <ImageView
-        android:id="@+id/album_photo"
+        android:id="@+id/album_cover_image_view"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_alignParentTop="true"
@@ -15,10 +15,10 @@
         tools:src="@drawable/stephen" />
 
     <TextView
-        android:id="@+id/song_name"
+        android:id="@+id/song_name_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/album_photo"
+        android:layout_below="@id/album_cover_image_view"
         android:layout_centerHorizontal="true"
         android:paddingTop="20dp"
         android:textColor="#000000"
@@ -26,10 +26,10 @@
         tools:text="Crossfire" />
 
     <TextView
-        android:id="@+id/artist_name"
+        android:id="@+id/artist_name_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/song_name"
+        android:layout_below="@id/song_name_text_view"
         android:layout_centerHorizontal="true"
         android:paddingTop="10dp"
         android:textColor="#000000"
@@ -39,41 +39,41 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/artist_name"
+        android:layout_below="@id/artist_name_text_view"
         android:layout_centerHorizontal="true"
         android:orientation="horizontal"
         android:paddingTop="50dp">
 
         <ImageView
+            android:id="@+id/previous_song_image_view"
             android:layout_width="70dp"
-            android:id="@+id/left"
             android:layout_height="70dp"
             android:layout_marginEnd="30dp"
             android:src="@drawable/left" />
 
         <ImageView
+            android:id="@+id/play_image_view"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:id="@+id/play"
             android:layout_marginEnd="30dp"
             android:src="@drawable/play" />
 
         <ImageView
+            android:id="@+id/next_song_image_view"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:id="@+id/right"
             android:src="@drawable/right" />
     </LinearLayout>
 
     <Button
+        android:id="@+id/songs_library_button"
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp"
         android:background="#000000"
-        android:textColor="#FFFFFF"
-        android:id="@+id/button"
-        android:text="@string/songs_library" />
+        android:text="@string/songs_library"
+        android:textColor="#FFFFFF" />
 
 </RelativeLayout>

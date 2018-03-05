@@ -28,20 +28,20 @@ public class SongAdapter extends ArrayAdapter<Song> {
         Song currentSong = getItem(position);
 
         //Setting the song's name
-        TextView textView = (TextView) listItemView.findViewById(R.id.song_name);
-        textView.setText(currentSong.getSongName());
+        TextView songNameTextView = (TextView) listItemView.findViewById(R.id.song_name_text_view);
+        songNameTextView.setText(currentSong.getSongName());
 
         //Setting the song's artist
-        textView = (TextView) listItemView.findViewById(R.id.artist_name);
-        textView.setText(currentSong.getArtistName());
+        TextView artistNameTextView = (TextView) listItemView.findViewById(R.id.artist_name_text_view);
+        artistNameTextView.setText(currentSong.getArtistName());
 
         //Setting the song's length
-        textView = (TextView) listItemView.findViewById(R.id.song_length);
-        textView.setText(currentSong.getLength());
+        TextView songLengthTextView = (TextView) listItemView.findViewById(R.id.song_length_text_view);
+        songLengthTextView.setText(currentSong.getLength());
 
         //Setting the album cover
-        ImageView imageView = (ImageView) listItemView.findViewById(R.id.album_photo);
-        imageView.setImageResource(currentSong.getAlbumPhoto());
+        ImageView albumCoverImageView = (ImageView) listItemView.findViewById(R.id.album_cover_image_view);
+        albumCoverImageView.setImageResource(currentSong.getAlbumCover());
 
         return listItemView;
     }

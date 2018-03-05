@@ -31,19 +31,19 @@ public class MainActivity extends AppCompatActivity {
         songs.add(new Song("Whatever It Takes", "Hollywood Undead", "3:15", R.drawable.hollywood_undead));
 
         //Creating an adapter
-        SongAdapter adapter = new SongAdapter(this, songs);
+        SongAdapter songAdapter= new SongAdapter(this, songs);
 
-        final ListView listView = (ListView) findViewById(R.id.list);
+        final ListView songsListView = (ListView) findViewById(R.id.songs_library_list_view);
 
         //Setting the adapter on the layout
-        listView.setAdapter(adapter);
+        songsListView.setAdapter(songAdapter);
 
         //Setting a ClickListener on the songs list
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        songsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 //Identifying the selected song
-                Song selectedSong = (Song) listView.getItemAtPosition(i);
+                Song selectedSong = (Song) songsListView.getItemAtPosition(i);
 
                 /**Creating an intent containing the song's name, artist and the album cover
                  * and sending it to the NowPlaying activity
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 Bundle extras = new Bundle();
                 extras.putString("song_name", selectedSong.getSongName());
                 extras.putString("artist_name", selectedSong.getArtistName());
-                extras.putInt("album_photo", selectedSong.getAlbumPhoto());
+                extras.putInt("album_photo", selectedSong.getAlbumCover());
                 intent.putExtras(extras);
                 startActivity(intent);
             }

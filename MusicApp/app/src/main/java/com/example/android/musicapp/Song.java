@@ -8,13 +8,13 @@ public class Song {
 
     private String mLength;
 
-    private int mAlbumPhoto;
+    private int mAlbumCover;
 
-    public Song(String songName, String artistName, String length, int albumPhoto) {
+    public Song(String songName, String artistName, String length, int albumCover) {
         mSongName = songName;
         mArtistName = artistName;
         mLength = length;
-        mAlbumPhoto = albumPhoto;
+        mAlbumCover = albumCover;
     }
 
     public String getSongName() {
@@ -29,7 +29,7 @@ public class Song {
         return mLength;
     }
 
-    public int getAlbumPhoto() {
-        return mAlbumPhoto;
+    public int getAlbumCover() {
+        return mAlbumCover;
     }
 }
