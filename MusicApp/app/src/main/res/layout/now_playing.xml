@@ -1,79 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.android.musicapp.NowPlaying">
 
-    <ImageView
-        android:id="@+id/album_cover_image_view"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="19dp"
-        tools:src="@drawable/stephen" />
-
-    <TextView
-        android:id="@+id/song_name_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/album_cover_image_view"
-        android:layout_centerHorizontal="true"
-        android:paddingTop="20dp"
-        android:textColor="#000000"
-        android:textSize="30sp"
-        tools:text="Crossfire" />
-
-    <TextView
-        android:id="@+id/artist_name_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/song_name_text_view"
-        android:layout_centerHorizontal="true"
-        android:paddingTop="10dp"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        tools:text="Stephen" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/artist_name_text_view"
-        android:layout_centerHorizontal="true"
-        android:orientation="horizontal"
-        android:paddingTop="50dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/previous_song_image_view"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="30dp"
-            android:src="@drawable/left" />
+            android:id="@+id/album_cover_image_view"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="19dp"
+            tools:src="@drawable/stephen" />
 
-        <ImageView
-            android:id="@+id/play_image_view"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="30dp"
-            android:src="@drawable/play" />
+        <TextView
+            android:id="@+id/song_name_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/album_cover_image_view"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="20dp"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            tools:text="@string/crossfire" />
 
-        <ImageView
-            android:id="@+id/next_song_image_view"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:src="@drawable/right" />
-    </LinearLayout>
+        <TextView
+            android:id="@+id/artist_name_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/song_name_text_view"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="10dp"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            tools:text="@string/stephen" />
 
-    <Button
-        android:id="@+id/songs_library_button"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"
-        android:background="#000000"
-        android:text="@string/songs_library"
-        android:textColor="#FFFFFF" />
+        <LinearLayout
+            android:id="@+id/navigation_buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/artist_name_text_view"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:paddingTop="50dp">
 
-</RelativeLayout>
+            <ImageView
+                android:id="@+id/previous_song_image_view"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginRight="30dp"
+                android:src="@drawable/left" />
+
+            <ImageView
+                android:id="@+id/play_image_view"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginRight="30dp"
+                android:src="@drawable/play" />
+
+            <ImageView
+                android:id="@+id/next_song_image_view"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/right" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/songs_library_button"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/navigation_buttons"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="#000000"
+            android:text="@string/songs_library"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+</ScrollView>

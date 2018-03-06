@@ -1,5 +1,11 @@
 <resources>
-    <string name="app_name">Music App</string>'
+    <string name="app_name">Music App</string>
 
+    <string name="song">Song</string>
+    <string name="artist">Artist</string>
     <string name="songs_library">Songs Library</string>
+    <string name="length">3:45</string>
+    <string name="crossfire">Crossfire</string>
+    <string name="stephen">Stephen</string>
+
 </resources>

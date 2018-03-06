@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Adding each song and its details: name, artist, album cover
         songs.add(new Song("Only One", "The Score", "3:48", R.drawable.the_score));
-        songs.add(new Song("Crossfire", "Stephen", "4:32", R.drawable.stephen));
+        songs.add(new Song("Crossfire","Stephen", "4:32", R.drawable.stephen));
         songs.add(new Song("I don't know why", "Imagine Dragons", "3:11", R.drawable.imagine_dragons));
         songs.add(new Song("Lane Boy", "twenty one pilots", "3:56", R.drawable.twenty_one_pilots));
         songs.add(new Song("Congratulations", "Post Malone", "3:47", R.drawable.post_malone));
